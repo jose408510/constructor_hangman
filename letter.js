@@ -1,4 +1,7 @@
 var inquirer = require('inquirer');
+var userName = '';
+var teams = []
+
 inquirer.prompt([
     {
         type:"input",
@@ -12,7 +15,39 @@ inquirer.prompt([
     },
 
 ]).then(function(user){
-    if(user.question){
-   console.log("GoodLuck......" + user.name + "\n\nLets see if you can guess the word im thinking of You have 10 Guesses")
-    }
+    if(user.question == true){
+        userName = user.name;
+        startRules();
+        startGame();
+}
 });
+
+function startRules(){
+    console.log("----------------------------------");
+    console.log("Welcome " + userName + " To the Best Basketball guessing Game");
+    console.log("----------------------------------");
+    console.log("Here are all the Rules");
+    console.log("----------------------------------");
+    console.log("You will be given 10 chances to guess the correct letter")
+    console.log("----------------------------------");
+    console.log("All the letters given each game make up a Basketball Team in the Western Confrence at random")
+    console.log("----------------------------------");
+    console.log("Goodluck...!!!!")
+
+}
+function startGame(){
+    teams
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
